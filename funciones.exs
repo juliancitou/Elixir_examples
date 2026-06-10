@@ -15,10 +15,23 @@ defmodule Calculadora do
     a * b
   end
 
-  def division(a, b) do
-    a / b
+  # division con guardas... Las guardas son una forma de sustituir el if de la divion en este caso, aqui intentaremos detectar o
+  # aislar la opcion de cuando b sea igual a 0, dando como resultado un mensaje de :inf para mostrar infinito
+  def division(a, b) when b == 0 do
+    :inf
   end
+
+  # division simple y cotidiana con if's, en donde podemos asignar este tipo
+  def division(a, b) do
+    if b == 0 do
+      "No se puede dividir entre cero"
+    else
+      a / b
+    end
+  end
+
 end
+
 IO.puts("===============================================================\n")
 
 a = String.to_integer(String.trim(IO.gets("Escribe el primer numero: ")))

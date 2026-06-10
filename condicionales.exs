@@ -34,11 +34,11 @@ mensajeIf =
 
 mensajeCond =
   cond do
-    lluvia == 0 -> "No ha llovido"
-    lluvia < 30 -> "Ha llovido"
-    lluvia < 70 -> "Ha llovido mucho"
+    lluvia == 0  -> "No ha llovido"
+    lluvia < 30  -> "Ha llovido"
+    lluvia < 70  -> "Ha llovido mucho"
     lluvia < 100 -> "Ha llovido demasiado"
-    true -> "Hay un diluvio en la tierra"
+    true         -> "Hay un diluvio en la tierra"
   end
 
 IO.puts("Mensaje emergente de la macro cond: #{mensajeCond}")

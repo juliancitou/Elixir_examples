@@ -1,0 +1,20 @@
+# Funciones anonimas... ¿para que nos sirven?
+# Las funciones anonimas son funciones que no tienen un nombre, es decir,
+# no se pueden llamar por su nombre, sino que se pueden asignar a una
+# variable o pasarlas como argumento a otra funcion, esto nos permite tener
+# una mayor flexibilidad a la hora de escribir codigo, ya que podemos crear
+# funciones de manera dinamica y utilizarlas en el momento que las
+# necesitemos, ademas de que nos permiten tener un codigo mas limpio y
+# organizado, ya que no tenemos que preocuparnos por el nombre de la funcion
+# y podemos enfocarnos en la logica de la misma.
+
+defmodule Calculon do
+  def operar(func) do
+    func.(5, 3)
+  end
+end
+
+IO.puts(Calculon.operar(fn a, b -> a + b end))
+IO.puts(Calculon.operar(fn a, b -> a - b end))
+IO.puts(Calculon.operar(fn a, b -> a * b end))
+IO.puts(Calculon.operar(fn a, b -> a / b end))
