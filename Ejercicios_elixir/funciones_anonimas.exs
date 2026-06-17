@@ -8,13 +8,14 @@
 # organizado, ya que no tenemos que preocuparnos por el nombre de la funcion
 # y podemos enfocarnos en la logica de la misma.
 
-defmodule Calculon do
-  def operar(func) do
-    func.(5, 3)
+defmodule Calculando do
+  def operar(valoresAnonimos) do
+    valoresAnonimos.(5, 3)
   end
 end
 
-IO.puts(Calculon.operar(fn a, b -> a + b end))
-IO.puts(Calculon.operar(fn a, b -> a - b end))
-IO.puts(Calculon.operar(fn a, b -> a * b end))
-IO.puts(Calculon.operar(fn a, b -> a / b end))
+IO.puts("Estas son las funciones anonimas: ")
+IO.puts(Calculando.operar(fn a, b -> a + b end))
+IO.puts(Calculando.operar(fn a, b -> a - b end))
+IO.puts(Calculando.operar(fn a, b -> a * b end))
+IO.puts(Calculando.operar(fn a, b -> a / b end))
