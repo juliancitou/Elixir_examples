@@ -14,12 +14,12 @@ elixir calculadora_tupla.exs
 
 ## EJECUTAR IEX PARA PRUEBAS INDIVIDUALES
 Si quieres probar por tu cuenta con la experiencia y escribir codigo desde la terminal de IEX lo puedes hacer realizando lo siguiente desde terminal, puedes entrar a la terminal de Windows y escribir: 
-```bash
+``` powershell
 PS C:\Users\user_name> iex.bat
 ``` 
 
 Aparecera algo como lo siguiente en la terminal:
-```bash
+```powershell
 Erlang/OTP 28 [erts-16.4.0.1] [source] [64-bit] [smp:12:12] [ds:12:12:10] [async-threads:1] [jit:ns]
 
 Interactive Elixir (1.19.5) - press Ctrl+C to exit (type h() ENTER for help)
@@ -27,7 +27,7 @@ iex(1)>
 ```
 
 Dentro de este esta nueva terminal puedes escribir y probar comandos de elixir, por ejemplo:
-```bash
+```powershell
 iex(1)> 1+1
 2
 iex(2)> x = 23
