@@ -46,11 +46,11 @@ defmodule PentoWeb.JuegoLive do
     <main class="px-4 py-20 sm:px-6 lg:px-8">
       <!-- Corregido: Ahora muestra @intentos en lugar de @puntuacion -->
       <h1 class="mb-4 text-4xl font-extrabold">Intentos realizados: {@intentos}</h1>
-      
+
       <h2 class="text-xl font-semibold mb-2">{@mensaje}</h2>
-      
+
       <h3 class="text-gray-500 mb-6">Son las {tiempo()} hrs</h3>
-      
+
       <div class="grid grid-cols-5 gap-2 max-w-xs">
         <%= for n <- 1..25 do %>
           <button
@@ -63,7 +63,7 @@ defmodule PentoWeb.JuegoLive do
           </button>
         <% end %>
       </div>
-      
+
       <%= if @juego_terminado do %>
         <button
           phx-click="reiniciar"
