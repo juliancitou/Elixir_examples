@@ -3,7 +3,7 @@ import Config
 config :pento, Pento.Repo,
   username: "julian",
   password: "22690208",
-  hostname: "localhost",
+  hostname: "127.0.0.1",
   database: "pento_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
