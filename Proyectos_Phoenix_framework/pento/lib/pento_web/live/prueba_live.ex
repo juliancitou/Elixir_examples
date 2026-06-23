@@ -10,6 +10,7 @@ defmodule PentoWeb.PruebaLive do
     mensaje = "Tu suposicion es: #{botonNum}. Incorrecta. Adivina de nuevo. "
     puntuacion = socket.assigns.puntuacion - 1
     tiempo = tiempo()
+
     {
       :noreply,
       assign(
@@ -27,9 +28,9 @@ defmodule PentoWeb.PruebaLive do
       <h1 class="mb-4 text-4xl font-extrabold">Tu puntuación es: {@puntuacion}</h1>
 
       <h2>{@mensaje}</h2>
-      <h2>Son las {tiempo() } hrs</h2>
+      <h2>Son las {tiempo()} hrs</h2>
       <h2>{@mensaje}</h2>
-       <br />
+      <br />
 
       <h2>
         <%= for n <- 1..15 do %>
@@ -42,7 +43,6 @@ defmodule PentoWeb.PruebaLive do
           </.link>
         <% end %>
       </h2>
-
     </main>
     """
   end
