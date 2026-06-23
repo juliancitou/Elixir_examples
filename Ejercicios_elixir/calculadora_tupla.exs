@@ -15,7 +15,7 @@ defmodule Calculadora do
     a * b
   end
 
-  # Division con tuplas, en donde podemos mandar una tupla en donde el segudno valor de division sea 0, si es asi mandara :inf
+  # Division con tuplas, en donde podemos mandar una tupla en donde el segudno valor de division sea 0, si es asi mandara :infinito
   def division(_a, 0) do
     :infinito
   end
