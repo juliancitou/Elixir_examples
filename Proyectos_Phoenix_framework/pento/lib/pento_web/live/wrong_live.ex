@@ -2,20 +2,16 @@ defmodule PentoWeb.WrongLive do
   use PentoWeb, :live_view
 
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, score: 0, message: "Adivina:")}
-  end
-
-  # Espezamos a crear un evento en el que esperamos 2 cosas, la 1ra es
-  def handle_event("guess", %{"number" => guess}, socket) do
-    message = "Tu suposicion es: #{guess}. Incorrecta. Adivina de nuevo. "
-    score = socket.assigns.score - 1
+    # IMPORTANTE: current_scope esta disponible gracias al callback llamado on_mount
+    user = socket.assigns.current_scope.user
 
     {
-      :noreply,
+      :ok,
       assign(
         socket,
-        score: score,
-        message: message
+        score: 0,
+        message: "Guess a number.",
+        current_user: user
       )
     }
   end
@@ -23,11 +19,10 @@ defmodule PentoWeb.WrongLive do
   def render(assigns) do
     ~H"""
     <main class="px-4 py-20 sm:px-6 lg:px-8">
-      <h1 class="mb-4 text-4xl font-extrabold">Tu puntuación es: {@score}</h1>
+      <h1 class="mb-4 text-4xl font-extrabold">Your score: {@score}</h1>
       <h2>
-        {@message} Son las {time()}
+        {@message}
       </h2>
-      <h2>{@message}</h2>
       <br />
       <h2>
         <%= for n <- 1..10 do %>
@@ -40,11 +35,24 @@ defmodule PentoWeb.WrongLive do
           </.link>
         <% end %>
       </h2>
+      <h2>
+        {@current_user.email}
+      </h2>
     </main>
     """
   end
 
-  def time do
-    DateTime.utc_now() |> to_string()
+  def handle_event("guess", %{"number" => guess}, socket) do
+    message = "Your guess: #{guess}. Wrong. Guess again. "
+    score = socket.assigns.score - 1
+
+    {
+      :noreply,
+      assign(
+        socket,
+        message: message,
+        score: score
+      )
+    }
   end
 end
