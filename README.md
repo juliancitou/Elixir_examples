@@ -14,7 +14,7 @@ ___
 ## ELIXIR
 Primero entraras a la carpeta de `Ejercicios_elixir` dentro es donde podras compilar los archivos `.exs`, recuerda que entras con:
 ``` bash 
-cd Ejercicios_elixir
+cd Elixir_examples
 ```
 ### Como compilar
 Desde terminal podras compilar el codigo que quieras revisar con el comando 
@@ -54,7 +54,7 @@ ___
 ### Para empezar
 Para empezar tendras que ingresar a un proyecto de los que estan disponibles para poder ver y probar.
 ``` bash
-cd Proyectos_Phoenix_framework/
+cd Phoenix_examples/
 cd pento/
 ```
 
