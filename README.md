@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ELIXIR EXAMPLES
 Ejercicio simples y complejos para practicar en elixir
 ___
@@ -19,34 +18,16 @@ cd Ejercicios_elixir
 ```
 ### Como compilar
 Desde terminal podras compilar el codigo que quieras revisar con el comando 
-=======
-# ELIXIR 
-Ejercicio simples y/o complejos para practicar en elixir con explicación dentro del codigo para dejar un poco mas claro el como funciona.
-
-### PARA INICIAR
-Nesecitas tener Elixir instalado y Erlang. revisa el sitio oficial para la instalacion desde el siguiente link: 
-https://elixir-lang.org/install.html 
-
-### COMO COMPILAR
-Para poder compilar necesitas entrar a la carpeta donde estan alojados los archivos desde terminal y ahi mismo compilar el codigo que quieras revisar con el comando. 
->>>>>>> 08101ae94988e41e5c8dd56f92717fd74250de5c
 
 ``` bash
 # EJEMPLO
 elixir calculadora_tupla.exs
 ```
 
-<<<<<<< HEAD
 ### Probar elixir desde Erlang (Opcional) 
 Si quieres probar por tu cuenta con la experiencia y escribir codigo desde la terminal de IEX lo puedes hacer realizando lo siguiente desde terminal, puedes entrar a la terminal de Windows y escribir: 
 ``` powershell
 > iex.bat
-=======
-### EJECUTAR IEX PARA PRUEBAS INDIVIDUALES
-Si quieres probar por tu cuenta con la experiencia y escribir codigo desde la terminal de IEX lo puedes hacer realizando lo siguiente desde terminal, puedes entrar a la terminal de Windows y escribir: 
-``` powershell
-PS C:\Users\user_name> iex.bat
->>>>>>> 08101ae94988e41e5c8dd56f92717fd74250de5c
 ``` 
 
 Aparecera algo como lo siguiente en la terminal:
@@ -77,18 +58,14 @@ cd Proyectos_Phoenix_framework/
 cd pento/
 ```
 
-<<<<<<< HEAD
 Dentro tendras que descargar las dependencias de de mix y tambien los necesario para cargar el frontend, esto se realiza de la siguiente manera: 
 ``` bash 
 mix deps.get
 cd assets && npm install
 ```
-=======
-# PHOENIX FRAMEWORK
-
-Para iniciar algun proyecto de Pheonix y poder ver lo que se ha contruido dentro tendras que... primero entrar al proyecto de interes, por ejemplo:
-``` bash
-cd pento
+### Levantar servicio
+Para levantar las vistas por localhost tendras que escribir.
+``` bash 
+> iex -S mix phx.server
 ```
-Dentro tendras que descargar las dependencias
->>>>>>> 08101ae94988e41e5c8dd56f92717fd74250de5c
+Despues de realizar esto entra a tu navegado y entra al `localhost:4000`
