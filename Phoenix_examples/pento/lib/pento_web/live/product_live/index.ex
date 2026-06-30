@@ -8,6 +8,12 @@ defmodule PentoWeb.ProductLive.Index do
     ~H"""
     <Layouts.app flash={@flash} current_scope={@current_scope}>
       <.header>
+        <%!--
+        AQUI ESTAMOS LLAMANDO A MI "CONSTANTE", ANQUE REALMENTE ES UN ATOMO LA CUAL ESTA EN EL ESTADO DEL
+        SOKET MAS ABAJITO PARA MANDARLA A LLAMAR SOLO NECESITAMOS UN @ ANTES DEL NOMBRE DEL ATOMO
+        --%>
+        <h1 class="text-2xl font-bold">{@saludo_personalizado}</h1>
+
         Listing Products
         <:actions>
           <.button variant="primary" navigate={~p"/products/new"}>
@@ -53,6 +59,12 @@ defmodule PentoWeb.ProductLive.Index do
     {:ok,
      socket
      |> assign(:page_title, "Listing Products")
+
+     # Aqui estamos añadiendo una "constante" al estado del socket,
+     # esta constante la podemos mandar a llamar poniendeo @nombre
+     # mas arriba en el render la utilizamos y mostramos para mostrar
+     # el texto de saludo1
+     |> assign(:saludo_personalizado, "Este es un saludo de Julián")
      |> stream(:products, list_products(socket.assigns.current_scope))}
   end
 
